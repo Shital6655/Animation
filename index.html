@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes bounce
+        {
+            0%,
+            100%
+            {
+                transform: translateY(25px);
+            }
+            50%
+            {
+                transform: translateY(-25px);
+            }
+        }
+        .bounce
+        {
+            height: 120px;
+            width: 150px;
+            background-color: darkgray;
+            margin-top: 40px;
+            animation: bounce 3s infinite;
+        }
+        h2
+        {
+            padding: 42px;
+            font-size: 20px;
+        }
+
+        @keyframes rotate
+        {
+            0%
+            {
+                transform: rotate(0deg);
+            }
+            100%
+            {
+                transform: rotate(360deg);
+            }
+        }
+        .rotate
+        {
+            height: 120px;
+            width: 150px;
+            background-color: rgb(50, 44, 44);
+            color: white;
+            margin-top: 50px;
+            animation: rotate 3s infinite;
+        }
+
+        @keyframes fade
+        {
+            0%,
+            100%
+            {
+                opacity: 0%;
+            }
+            50%
+            {
+                opacity: 100%;
+            }
+        }
+        .fade
+        {
+            height: 120px;
+            width: 150px;
+            background-color: rgb(108, 75, 75);
+            color: white;
+            margin-top: 50px;
+            animation: fade 3s infinite;
+        }
+
+        @keyframes slide
+        {
+            0%
+            {
+                transform: translateX(0px);
+            }
+            50%
+            {
+                transform: translateX(100px);
+            }
+            100%
+            {
+                transform: translateX(0px);
+            }
+        }
+        .slide
+        {
+            height: 120px;
+            width: 150px;
+            background-color: rgb(185, 102, 102);
+            color: white;
+            margin-top: 50px;
+            animation: slide 3s infinite;
+        }
+
+        @keyframes double-bounce
+        {
+            0%
+            {
+                transform: translate(0px);
+            }
+            25%
+            {
+                transform: translateX(25vw) translateY(50px);
+            }
+            75%
+            {
+                transform: translateX(50vw) translateY(0px);
+            }
+            100%
+            {
+                transform: translateX(75vw) translateY(50px);
+            }
+        }
+        .double-bounce
+        {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-color: rgb(241, 156, 156);
+            color: white;
+            margin-top: 50px;
+            margin-bottom: 70px;
+            animation: double-bounce 3s infinite;
+        }
+        .double-bounce h2
+        {
+            font-size: 15px;
+            padding: 20px;
+        }
+
+        @keyframes loader
+        {
+            0%
+            {
+                transform: rotate(0deg);
+            }
+            100%
+            {
+                transform: rotate(360deg);
+            }
+        }
+        .loader
+        {
+            height: 200px;
+            width: 200px;
+            /* border-radius: 50%;
+            border: 5px solid gray;
+            border-top-color: black;
+            background-color: burlywood; */
+            position: relative;
+        }
+        .animate
+        {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 8px solid gray;
+            border-top-color: black;
+            
+            &:hover
+            {
+                animation: loader 3s infinite;
+            }
+        }
+        img
+        {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            padding: 45px;
+            position: absolute;
+        }
+
+        @keyframes background-change
+        {
+            0%
+            {
+                background-color: rgb(235, 29, 29);
+            }
+            20%
+            {
+                background-color: rgb(220, 223, 40);
+            }
+            60%
+            {
+                background-color: rgb(47, 216, 28);
+            }
+            100%
+            {
+                background-color: rgb(54, 43, 210);
+            }
+        }
+        .background-change
+        {
+            height: 120px;
+            width: 150px;
+            background-color: rgb(140, 41, 41);
+            color: white;
+            margin-top: 50px;
+            animation: background-change 3s infinite;
+        }
+
+        @keyframes loader2
+        {
+            0%
+            {
+                background-color: white;
+                width: 0%;
+            }
+            10%
+            {
+                background-color: rgb(47, 144, 255);
+                width: 10%;
+            }
+            20%
+            {
+                background-color: rgb(47, 144, 255);
+                width: 20%;
+            }
+            30%
+            {
+                background-color: rgb(47, 144, 255);
+                width: 30%;
+            }
+            40%
+            {
+                background-color: rgb(47, 144, 255);
+                width: 40%;
+            }
+           
+        }
+        .loader2
+        {
+            height: 30px;
+            width: 500px;
+            border-radius:20px;
+            /* background-color: rgb(166, 34, 34); */
+            margin-top: 10px;
+            animation: loader2 3s infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 40px;">Animation Properties</h1><hr>
+    <div class="bounce">
+        <h2>Bounce Effect</h2>
+    </div><br><br>
+
+    <hr>
+
+    <div class="rotate">
+        <h2>Rotate Effect</h2>
+    </div><br><br>
+
+    <hr>
+
+    <div class="fade">
+        <h2>Fading Effect</h2>
+    </div><br><br>
+
+    <hr>
+
+    <div class="slide">
+        <h2>Slide Effect</h2>
+    </div><br><br>
+
+    <hr>
+
+    <div class="double-bounce">
+        <h2>Double Bounce</h2>
+    </div><br><br>
+
+    <hr>
+
+    <div class="loader">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/5a3d0d69916383.5b940de056028.gif" alt="">
+        <div class="animate">
+
+        </div>
+    </div><br>
+
+    <hr>
+
+    <div class="background-change">
+        <h2>Color Effect</h2>
+    </div><br><br>
+
+    <hr>
+
+    <h3>Loading...</h3>
+    <div class="loader2">
+
+    </div>
+</body>
+</html>
